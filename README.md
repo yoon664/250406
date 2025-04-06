@@ -36,3 +36,15 @@
 
 4. Link 태그 사용
 <Link to="/></Link>
+
+---
+
+## 3-1 useParams
+
+- URL파라미터 추출
+
+1. fkdnxm tjfwjddptj vkfkalxj cncnf
+<Route path="/users/:id" element={<UserDetail/> }>
+
+2. 컴포넌트에서 파라미터 추출
+const {id} = useParams();
