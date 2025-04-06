@@ -25,6 +25,26 @@ const Step02 = () => {
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
+        onSlideChangeTransitionStart={
+            (swiper)=>{
+                console.log(swiper);
+                console.log(`현재 슬라이드 : ${swiper.activeIndex + 1}`);
+                const currentSlide = swiper.slides[swiper.activeIndex];
+                if(swiper.activeIndex === 3){
+                    currentSlide.style.backgroundColor = 'red';
+                }
+            }
+        }
+        onSlideChangeTransitionEnd={
+            (swiper)=>{
+                console.log(swiper);
+                console.log(`현재 슬라이드 : ${swiper.activeIndex + 1}`);
+                const currentSlide = swiper.slides[swiper.activeIndex];
+                if(swiper.activeIndex === 2){
+                    currentSlide.style.backgroundColor = 'yellow';
+                }
+            }
+        }
       >
         <SwiperSlide>slideeee</SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
