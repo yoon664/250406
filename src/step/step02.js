@@ -25,6 +25,7 @@ const Step02 = () => {
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
+        // 슬라이드 변경_시작 시
         onSlideChangeTransitionStart={
             (swiper)=>{
                 console.log(swiper);
@@ -35,6 +36,7 @@ const Step02 = () => {
                 }
             }
         }
+        // 슬라이드 변경_완료 시
         onSlideChangeTransitionEnd={
             (swiper)=>{
                 console.log(swiper);
